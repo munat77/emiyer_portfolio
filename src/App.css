@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --pink: #ff69b4;
+  --dark-pink: #ff1493;
+  --black: #2d2d2d;
+  --white: #ffffff;
+  --light-bg: #fff9fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Decorative Elements */
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.decorative-circle.pink {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 105, 180, 0.1);
+  top: -150px;
+  right: -150px;
+}
+
+.decorative-circle.white {
+  width: 200px;
+  height: 200px;
+  border: 20px solid rgba(255, 105, 180, 0.05);
+  bottom: 50px;
+  left: -100px;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--white);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+  position: relative;
+}
+
+.tech-icons {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: var(--pink);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.tagline {
+  color: var(--pink);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  height: 3px;
+  width: 100px;
+  margin: 1.5rem auto;
+  background: var(--pink);
+}
+
+/* Main Content */
+.main-content {
+  margin: 4rem 0;
+}
+
+.about-section {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--pink), var(--dark-pink));
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.highlight {
+  color: var(--pink);
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.detail-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-card p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.detail-card ul {
+  list-style: none;
+}
+
+.detail-card li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.detail-card li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+.contact .icon {
+  margin-right: 10px;
+  color: var(--pink);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--black);
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--pink);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--black);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-section {
+    padding: 2rem 1.5rem;
+  }
+}
